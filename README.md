@@ -4,10 +4,9 @@ When a file is added to the pages directory it's automatically available as a ro
 
 First clone this repo: `git clone https://github.com/rehabas/next-js-router.git`, then run `npm i`
 
-To run the server, Open your terminal and run: `npm run dev`
+To run the server, open your terminal and run: `npm run dev`
 
-Create `src` folder, inside it create `pages` folder 
-`src/pages/index.js`:
+Create `src` folder, inside it create `pages` folder, then create `index.js` file inside `pages` folder and add this code inside it: (`src/pages/index.js`)
 
 ```js 
 const Index = () => <h1>Index Page</h1>
@@ -16,9 +15,9 @@ export default Index;
 
 ```
 
-you can also notice that you don't need to have import react from react, because next.js is using bubble to put that for us automatically.
+**Note:** With `Next.js` you don’t need to import `React` because `Next.js` does this for you automatically.
 
-Inside `pages` folder, create `details.js` file, and add this code:
+Inside `pages` folder, create `details.js` file, and add this code inside it: (`src/pages/details.js`)
 
 ```js
 const Details = () => <h2>Details</h2>
@@ -27,7 +26,7 @@ export default Details;
 
 ```
 
-Inside `pages` folder, create `device` folder, then create `john.js` file inside `device`, and add this code:
+Inside `pages` folder, create `device` folder, then create `john.js` file inside `device` folder and add this code inide it: (`src/pages/device/john.js`)
 
 ```js
 const John = () => <h2>John's phone</h2>
@@ -38,18 +37,14 @@ export default John;
 
 ![](https://i.imgur.com/iHzYZmA.png)
 
-Instead of device we can have a watch or a camera or phone so, instead of receiving a completely static name that device we put a square brackets and those square brackets are telling `next.js` that it is a variable called device in our URL and it's dynamic it:
+Instead of `device`, you can have a watch or a camera or a phone so, instead of receiving a completely static name that device you put square brackets and those square brackets are telling `next.js` that it is a variable called `device` in URL and it's dynamic it:
 `src/pages/[device]/[person].js`
 
-```
-http://localhost:3000/device/john
-```
-replace with:
-```
-http://localhost:3000/phone/Alex
-```
+![Selection_216](https://user-images.githubusercontent.com/49806841/87908270-c7788880-ca6e-11ea-860c-5c76764399c0.png)
 
-Now from this dynamic routing how can I read the parameters from the URL? it's easy as well so let's do import `useRouter` from `next.js` router:
+Try to replace this URL: `http://localhost:3000/device/john` with `http://localhost:3000/phone/Alex`
+
+Now from this dynamic routing how can you read the parameters from the URL? it's easy as well so let's do import `useRouter` from `next.js` router:
 Inside `john.js` replace this code:
 ```js
 const John = () => <h2>John's phone</h2>
@@ -78,7 +73,7 @@ We have router as something called query so all the parameters that we are havin
 
 
 Now edit code in `john.js`:
-```javascript=
+```js
 import { useRouter } from 'next/router';
 
 const Person = () => {
@@ -98,7 +93,7 @@ Now add this route in url par:
 ![](https://i.imgur.com/ivgXW1J.png)
 
 
-After the browser refreshes you can see the device is `camera` and the person is `michael`
+After the browser refreshes, you can see the device is `camera` and the person is `michael`
 
 ![](https://i.imgur.com/u4ocs4r.png)
 
