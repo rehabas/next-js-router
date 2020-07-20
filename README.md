@@ -4,8 +4,6 @@ When a file is added to the pages directory it's automatically available as a ro
 
 First clone this repo: `git clone https://github.com/rehabas/next-js-router.git`, then run `npm i`
 
-To run the server, open your terminal and run: `npm run dev`
-
 Create `src` folder, inside it create `pages` folder, then create `index.js` file inside `pages` folder and add this code inside it: (`src/pages/index.js`)
 
 ```js 
@@ -14,6 +12,8 @@ const Index = () => <h1>Index Page</h1>
 export default Index;
 
 ```
+
+To run the server, open your terminal and run: `npm run dev`
 
 **Note:** With `Next.js` you don’t need to import `React` because `Next.js` does this for you automatically.
 
