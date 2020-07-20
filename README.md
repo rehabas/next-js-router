@@ -2,7 +2,7 @@
 
 When a file is added to the pages directory it's automatically available as a route.
 
-First clone this repo: `git clone https://github.com/GSG-G8/ca-wiki.git`, then run `npm i`
+First clone this repo: `git clone https://github.com/rehabas/next-js-router.git`, then run `npm i`
 
 To run the server, Open your terminal and run: `npm run dev`
 
@@ -168,7 +168,7 @@ export default Details;
 ```
 
 now:
-```javascript=
+```js
 import Link from 'next/link';
 
 const people = [
