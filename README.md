@@ -98,21 +98,17 @@ After the browser refreshes, you can see the device is `camera` and the person i
 ![](https://i.imgur.com/u4ocs4r.png)
 
 
-If you edit url, and you have query parameters,for example:
+Edit url and add query parameters,for example:
 
 ![](https://i.imgur.com/P5U7I3b.png)
 
 
-But if you have more than one query parameters, for example:
-![](https://i.imgur.com/WOSAJ3p.png)
-
-
-Now you can see that you have an array in query:
+But if you have more than one query parameters, you can see that you have an array in query:
 
 ![](https://i.imgur.com/OGvwEIa.png)
 
 
-So you received `sam` and `alex`, so if you have more than one you will receive an array,if you just have one you will receive just the single property.
+You received `sam` and `alex`, so if you have more than one you will receive an array, if you just have one you will receive just the single property.
 
 ## Linking between pages
 
@@ -162,7 +158,7 @@ export default Details;
 
 ```
 
-now:
+Now:
 ```js
 import Link from 'next/link';
 
@@ -187,7 +183,7 @@ export default Details;
 
 ```
 
-inside `src` create `containers` folder
+Inside `src` create `containers` folder
 create `Homepage.js` and add this code:
 
 ```js
