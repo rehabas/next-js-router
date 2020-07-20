@@ -143,6 +143,7 @@ But if you go back to `http://localhost:3000/details` and open the development t
 so you have to provide `href` and `as` to make sure the router knows which JavaScript file to load.
 
 **href** - The name of the page in the pages directory. For example `/[device]/[person]`.
+
 **as** - The url that will be shown in the browser. For example `/phone/John`.
 ```js
 import Link from 'next/link';
@@ -183,8 +184,7 @@ export default Details;
 
 ```
 
-Inside `src` create `containers` folder
-create `Homepage.js` and add this code:
+Inside `src` create `containers` folder, then create `Homepage.js` file inside `containers` folder and add this code inside it: (`src/containers/Homepage.js`)
 
 ```js
 const Homepage = () => <h1>Hello</h1>
@@ -192,7 +192,7 @@ const Homepage = () => <h1>Hello</h1>
 export default Homepage;
 ```
 
-Inside `index.js` in `pages` folder put this code:
+Inside `index.js` in `pages` folder add this code:
 
 ```js
 import Homepage from '../containers/Homepage';
@@ -204,7 +204,7 @@ export default Homepage;
 ![](https://i.imgur.com/VpRlypv.png)
 
 
-Inside `pages` folder, create `homepage.js` file and add this code:
+Inside `pages` folder, create `homepage.js` file and add this code inside it:
 
 ```js
 import Homepage from '../containers/Homepage';
