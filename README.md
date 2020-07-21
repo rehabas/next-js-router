@@ -35,9 +35,11 @@ export default John;
 
 ```
 
+Now, go to: (`http://localhost:3000/device/john`)
+
 ![](https://i.imgur.com/iHzYZmA.png)
 
-Instead of `device`, you can have a watch or a camera or a phone so, instead of receiving a completely static name that device you put square brackets and those square brackets are telling `next.js` that it is a variable called `device` in URL and it's dynamic it:
+Instead of `device`, you can have a watch or a camera or a phone. So, instead of receiving a completely static name that device,  put square brackets and those square brackets are telling `next.js` that it is a variable called `device` in URL and it's dynamic:
 `src/pages/[device]/[person].js`
 
 ![Selection_216](https://user-images.githubusercontent.com/49806841/87908270-c7788880-ca6e-11ea-860c-5c76764399c0.png)
@@ -45,13 +47,8 @@ Instead of `device`, you can have a watch or a camera or a phone so, instead of 
 Try to replace this URL: `http://localhost:3000/device/john` with `http://localhost:3000/phone/Alex`
 
 Now from this dynamic routing how can you read the parameters from the URL? it's easy as well so let's do import `useRouter` from `next.js` router:
-Inside `john.js` replace this code:
-```js
-const John = () => <h2>John's phone</h2>
+Inside `john.js` add this code:
 
-export default John;
-```
-with this code:
 ```js
 import { useRouter } from 'next/router';
 
@@ -67,7 +64,7 @@ const Person = () => {
 export default Person;
 
 ```
-We have router as something called query so all the parameters that we are having for example `device` and `person` will be inside this query:
+We have a router as something called query so all the parameters that we are having, for example, `device` and `person` will be inside this query:
 
 ![](https://i.imgur.com/O2g5bgZ.png)
 
@@ -88,7 +85,7 @@ const Person = () => {
 export default Person;
 ```
 
-Now add this route in url par:
+Now, go to: (`http://localhost:3000/camera/michael`)
 
 ![](https://i.imgur.com/ivgXW1J.png)
 
@@ -98,12 +95,12 @@ After the browser refreshes, you can see the device is `camera` and the person i
 ![](https://i.imgur.com/u4ocs4r.png)
 
 
-Edit url and add query parameters,for example:
+Edit url and add query parameters,for example: (`http://localhost:3000/camera/michael?query1=sam`)
 
 ![](https://i.imgur.com/P5U7I3b.png)
 
 
-But if you have more than one query parameters, you can see that you have an array in query:
+But if you have more than one query parameters, you can see that you have an array in query: (`http://localhost:3000/camera/michael?query1=sam&query1=alex`)
 
 ![](https://i.imgur.com/OGvwEIa.png)
 
@@ -112,7 +109,7 @@ You received `sam` and `alex`, so if you have more than one you will receive an 
 
 ## Linking between pages
 
-Now you need to navigate to these pages you created because you are just going to your browser inputting the URLs there no user will be doing that, so in order to navigate for example from `details` to `person`: 
+Now you need to navigate to these pages you created because you are just going to your browser inputting the URLs and there is no user will be doing that, so to navigate, for example, from `details` to `person`: 
 
 In `detail.js`
 
@@ -129,7 +126,7 @@ const Details = () =>
 export default Details;
 
 ```
-Open your browser again and go to `details` page and now let's see what's happening:
+Open your browser again and go to (`http://localhost:3000/details`) and now let's see what's happening:
 
 ![](https://i.imgur.com/RfstcZD.png)
 
