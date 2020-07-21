@@ -214,3 +214,8 @@ export default Homepage;
 ```
 ![](https://i.imgur.com/VBG77mj.png)
 
+
+# Resources
+
+* https://nextjs.org/docs/basic-features/pages
+* https://nextjs.org/docs/routing/introduction
